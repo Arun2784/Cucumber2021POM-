@@ -12,7 +12,14 @@ public class Driverfactory {
 
 	public static ThreadLocal<WebDriver> tldriver = new ThreadLocal<>();
 
-	public void init_driver(String browser) {
+	/**
+	 * This method is use to initlialize the threadlocal driver on the basis of
+	 * given browser
+	 * 
+	 * @param browser
+	 * @return this will return tldriver
+	 */
+	public WebDriver init_driver(String browser) {
 
 		System.out.println("browser value is " + browser);
 
@@ -30,6 +37,21 @@ public class Driverfactory {
 
 			System.out.println("Please Pass the correct browser Value");
 		}
+
+		getDriver().manage().deleteAllCookies();
+		getDriver().manage().window().maximize();
+		return getDriver();
+
+	}
+
+	/**
+	 * This is used to get the driver with Threadlocal
+	 * 
+	 * @return
+	 */
+	public static synchronized WebDriver getDriver() {
+
+		return tldriver.get();
 
 	}
 
