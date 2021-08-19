@@ -5,14 +5,14 @@ import org.junit.Assert;
 import com.pages.LoginPage;
 import com.qa.factory.Driverfactory;
 
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 public class LoginPagesteps {
 	private static String title;
 	private LoginPage loginPage = new LoginPage(Driverfactory.getDriver());
-	private Driverfactory driverfatory = new Driverfactory();
+	//private Driverfactory driverfatory = new Driverfactory();
 
 	@Given("user is on login page")
 	public void user_is_on_login_page() throws Throwable {

@@ -8,10 +8,10 @@ import org.openqa.selenium.WebDriver;
 
 import com.qa.factory.Driverfactory;
 import com.qa.util.ConfigReader;
-import cucumber.api.Scenario;
-import cucumber.api.java.After;
-import cucumber.api.java.Before;
 
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 public class Applicationshooks {
 
 	private Driverfactory driverfactory;
@@ -37,21 +37,20 @@ public class Applicationshooks {
 	}
 
 	@After(order = 0)
-
 	public void quitBrowser() {
 		driver.quit();
 	}
 
-	@After(order = 1)
-
-	public void tearDown(Scenario scenario) {
-		if (scenario.isFailed()) {
-			// take screenshot:
-			//String screenshotName = scenario.getName().replaceAll(" ", "_");
-			byte[] sourcePath = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-			scenario.embed(sourcePath, "image/png");
-
-		}
-
-	}
+//	@After(order = 1)
+//
+//	public void tearDown(Scenario scenario) {
+//		if (scenario.isFailed()) {
+//			// take screenshot:
+//			// String screenshotName = scenario.getName().replaceAll(" ", "_");
+//			byte[] sourcePath = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+//			scenario.embed(sourcePath, "image/png");
+//
+//		}
+//
+//	}
 }
