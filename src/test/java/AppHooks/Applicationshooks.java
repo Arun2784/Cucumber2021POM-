@@ -12,6 +12,7 @@ import com.qa.util.ConfigReader;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
+
 public class Applicationshooks {
 
 	private Driverfactory driverfactory;
@@ -41,16 +42,17 @@ public class Applicationshooks {
 		driver.quit();
 	}
 
-//	@After(order = 1)
-//
-//	public void tearDown(Scenario scenario) {
-//		if (scenario.isFailed()) {
-//			// take screenshot:
-//			// String screenshotName = scenario.getName().replaceAll(" ", "_");
-//			byte[] sourcePath = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-//			scenario.embed(sourcePath, "image/png");
-//
-//		}
-//
-//	}
+	@After(order = 1)
+
+	public void tearDown(Scenario scenario) {
+		if (scenario.isFailed()) {
+			// take screenshot:
+			String screenshotName = scenario.getName().replaceAll(" ", "_");
+			byte[] sourcePath = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+			// scenario.embed(sourcePath, "image/png");
+			scenario.attach(sourcePath, "image/png", screenshotName);
+
+		}
+
+	}
 }

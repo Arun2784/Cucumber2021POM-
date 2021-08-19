@@ -4,7 +4,7 @@ Feature: Login Page feature
 Scenario: Login Page Title
 Given user is on login page
 When User gets the title of the Page
-Then Page title should be " Login - My Store"
+Then Page title should be "My Store"
 
 Scenario: Forgot Password Link
 Given user is on login page
@@ -16,4 +16,4 @@ When User Enter UserName "Arunpandey2784@gmail.com"
 And user Enter Password "Arun2784$"
 And user clicks on Login Button
 When User gets the title of the Page
-And Page title should be "My account - my Store"
+And Page title should be "My account - My Store"
