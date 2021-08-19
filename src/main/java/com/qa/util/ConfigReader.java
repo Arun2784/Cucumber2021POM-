@@ -13,7 +13,7 @@ public class ConfigReader {
 
 		prop = new Properties();
 		try {
-			FileInputStream fp = new FileInputStream(".src/test/resources/config/config.properties");
+			FileInputStream fp = new FileInputStream("D:\\Automation\\POMPractice3\\src\\test\\resources\\config\\config.properties");
 			prop.load(fp);
 
 		} catch (FileNotFoundException e) {
