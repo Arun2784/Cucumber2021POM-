@@ -2,7 +2,7 @@ Feature: Account Page Feature
 
 Background:
 Given user has already logged in to application
-|username |Password |
+|username |password |
 |arunpandey2784@gmail.com |Arun2784$ |
   
  Scenario: Accounts Page title
@@ -14,9 +14,10 @@ Given user has already logged in to application
  Scenario: Accounts section count
  Given user is on Accounts Page
  Then user gets accounts section
- |Order history and details |
- |My credit slips |
- |My addresses |
- |My personal information |
- |My wishlists |
- And accounts section count should be 5 
+ |ORDER HISTORY AND DETAILS |
+ |MY CREDIT SLIPS |
+ |MY ADDRESSES |
+ |MY PERSONAL INFORMATION |
+ |MY WISHLISTS |
+  |Home |
+ And accounts section count should be 6

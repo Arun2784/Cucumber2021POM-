@@ -21,14 +21,14 @@ public class LoginPagesteps {
 				.get("http://automationpractice.com/index.php?controller=authentication&back=my-account");
 	}
 
-	@When("User gets the title of the Page")
+	@When("user gets the title of the Page")
 	public void user_gets_the_title_of_the_Page() throws Throwable {
 		title = loginPage.getLoginPageTitle();
 		System.out.println("title is " + title);
 	}
 
 	// @Then("Page title should be {string}")
-	@Then("^Page title should be \"([^\"]*)\"$")
+	@Then("^page title should be \"([^\"]*)\"$")
 	public void page_title_should_be(String ExpectedTitleName) {
 
 		Assert.assertTrue(title.contains(ExpectedTitleName));

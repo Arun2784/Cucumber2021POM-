@@ -11,7 +11,7 @@ public class LoginPage {
 	private By emailid = By.id("email");
 	private By password = By.id("passwd");
 	private By signInButton = By.id("SubmitLogin");
-	private By ForgotPwdLink = By.linkText("Forgot your password?");
+	private By ForgotPwdLink = By.linkText("Forgot your password?11");
 
 	// 2. Constructor pof the Page class
 
@@ -41,6 +41,15 @@ public class LoginPage {
 
 	public void clickOnLogin() {
 		driver.findElement(signInButton).click();
+	}
+
+	public AccountsPage doLogin(String un, String pssw) {
+		System.out.println("Login with: " + un + "and " + pssw);
+		driver.findElement(emailid).sendKeys(un);
+		driver.findElement(password).sendKeys(pssw);
+		driver.findElement(signInButton).click();
+		return new AccountsPage(driver);
+
 	}
 
 }
