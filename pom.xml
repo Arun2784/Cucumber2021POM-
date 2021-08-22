@@ -81,9 +81,9 @@
 		</dependency>
 
 		<dependency>
-			<groupId>info.cukes</groupId>
+			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-testng</artifactId>
-			<version>1.2.5</version>
+			<version>6.11.0</version>
 		</dependency>
 
 		<dependency>
@@ -132,16 +132,45 @@
 					<artifactId>maven-resources-plugin</artifactId>
 					<version>3.0.2</version>
 				</plugin>
+				<plugin>
+
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-failsafe-plugin</artifactId>
+					<version>3.0.0-M5</version>
+
+					<executions>
+						<execution>
+
+							<goals>
+
+								<goal>integration-test</goal>
+							</goals>
+							<configuration>
+								<includes>**MyTestRunner.java</includes>
+								<parallel>methods</parallel>
+								<threadcoun>4</threadcoun>
+								<perCoreThreadCount>true</perCoreThreadCount>
+							</configuration>
+						</execution>
+
+
+					</executions>
+
+				</plugin>
 
 				<plugin>
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>2.22.1</version>
+					<configuration>
+					 <parallel>methods</parallel>
+                     <useUnlimitedThreads>true</useUnlimitedThreads>
+					</configuration>
 				</plugin>
 				<plugin>
 					<artifactId>maven-jar-plugin</artifactId>
 					<version>3.0.2</version>
 					<configuration>
-
+                    
 					</configuration>
 				</plugin>
 				<plugin>
