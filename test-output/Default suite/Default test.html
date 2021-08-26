@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>4/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>4/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Aug 22 21:08:12 IST 2021</td>
+<td>Started on:</td><td>Thu Aug 26 15:28:39 IST 2021</td>
 </tr>
-<tr><td>Total time:</td><td>38 seconds (38507 ms)</td>
+<tr><td>Total time:</td><td>77 seconds (77017 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,16 +75,16 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='parallel.ParallelRun.runScenario()'><b>runScenario</b><br>Test class: parallel.ParallelRun<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Forgot Password Link", "Optional[Login Page feature]"</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Forgot your password?11&quot;}
-  (Session info: chrome=92.0.4515.131)
+<td title='parallel.ParallelRun.runScenario()'><b>runScenario</b><br>Test class: parallel.ParallelRun<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Contact Us scenario with different set of data", "Optional[Contact us Feature]"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;div#center_column p&quot;}
+  (Session info: chrome=92.0.4515.159)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: &apos;4.0.0-beta-4&apos;, revision: &apos;29f46d02dd&apos;
 System info: host: &apos;A900HO_L_A9687&apos;, ip: &apos;192.168.1.5&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [dbe3c3b857598eb7b361c94bd1f59f8a, findElement {using=link text, value=Forgot your password?11}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.131, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: C:\Users\A9687\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:49622}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:49622/devtoo..., se:cdpVersion: 92.0.4515.131, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: dbe3c3b857598eb7b361c94bd1f59f8a
+Command: [f43ee4f0c9c8469500afce62ef3756f2, findElement {using=css selector, value=div#center_column p}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: C:\Users\A9687\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55247}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55247/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f43ee4f0c9c8469500afce62ef3756f2
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -100,19 +100,19 @@ Session ID: dbe3c3b857598eb7b361c94bd1f59f8a
 	at org.openqa.selenium.remote.RemoteWebDriver$Mechanism$2.findElement(RemoteWebDriver.java:1251)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:373)
-	at com.pages.LoginPage.isForgotPwdLinExist(LoginPage.java:30)
-	at parallel.LoginPagesteps.forgot_Password_link_should_be_displayed(LoginPagesteps.java:40)
-	at ?.Forgot Password link should be displayed(file:///D:/Automation/POMPractice3/src/test/resources/parallel/loginPage.feature:11)
-</pre></div><a href='#' onClick='toggleBox("stack-trace898629931", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace898629931'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Forgot your password?11&quot;}
-  (Session info: chrome=92.0.4515.131)
+	at com.pages.ContactUsPage.getSuccessMessg(ContactUsPage.java:44)
+	at parallel.ContactUsSteps.it_shows_a_successfull_message(ContactUsSteps.java:53)
+	at ?.it shows a successfull message &quot;Your message has been successfully sent to our team.&quot;(file:///D:/Automation/POMPractice3/src/test/resources/parallel/ContactUs.feature:7)
+</pre></div><a href='#' onClick='toggleBox("stack-trace9249310", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace9249310'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;div#center_column p&quot;}
+  (Session info: chrome=92.0.4515.159)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: &apos;4.0.0-beta-4&apos;, revision: &apos;29f46d02dd&apos;
 System info: host: &apos;A900HO_L_A9687&apos;, ip: &apos;192.168.1.5&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [dbe3c3b857598eb7b361c94bd1f59f8a, findElement {using=link text, value=Forgot your password?11}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.131, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: C:\Users\A9687\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:49622}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:49622/devtoo..., se:cdpVersion: 92.0.4515.131, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: dbe3c3b857598eb7b361c94bd1f59f8a
+Command: [f43ee4f0c9c8469500afce62ef3756f2, findElement {using=css selector, value=div#center_column p}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: C:\Users\A9687\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55247}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55247/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f43ee4f0c9c8469500afce62ef3756f2
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -128,11 +128,71 @@ Session ID: dbe3c3b857598eb7b361c94bd1f59f8a
 	at org.openqa.selenium.remote.RemoteWebDriver$Mechanism$2.findElement(RemoteWebDriver.java:1251)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:373)
-	at com.pages.LoginPage.isForgotPwdLinExist(LoginPage.java:30)
-	at parallel.LoginPagesteps.forgot_Password_link_should_be_displayed(LoginPagesteps.java:40)
-	at ?.Forgot Password link should be displayed(file:///D:/Automation/POMPractice3/src/test/resources/parallel/loginPage.feature:11)
+	at com.pages.ContactUsPage.getSuccessMessg(ContactUsPage.java:44)
+	at parallel.ContactUsSteps.it_shows_a_successfull_message(ContactUsSteps.java:53)
+	at ?.it shows a successfull message &quot;Your message has been successfully sent to our team.&quot;(file:///D:/Automation/POMPractice3/src/test/resources/parallel/ContactUs.feature:7)
 </pre></div></td>
-<td>25</td>
+<td>59</td>
+<td>parallel.ParallelRun@793f29ff</td></tr>
+<tr>
+<td title='parallel.ParallelRun.runScenario()'><b>runScenario</b><br>Test class: parallel.ParallelRun<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Contact Us scenario with different set of data", "Optional[Contact us Feature]"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;div#center_column p&quot;}
+  (Session info: chrome=92.0.4515.159)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-beta-4&apos;, revision: &apos;29f46d02dd&apos;
+System info: host: &apos;A900HO_L_A9687&apos;, ip: &apos;192.168.1.5&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5fbcae6350c32f9c7ef6ad3d6ade0f89, findElement {using=css selector, value=div#center_column p}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: C:\Users\A9687\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57134}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57134/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 5fbcae6350c32f9c7ef6ad3d6ade0f89
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:162)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:137)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:612)
+	at org.openqa.selenium.remote.RemoteWebDriver$Mechanism$2.findElement(RemoteWebDriver.java:1251)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:373)
+	at com.pages.ContactUsPage.getSuccessMessg(ContactUsPage.java:44)
+	at parallel.ContactUsSteps.it_shows_a_successfull_message(ContactUsSteps.java:53)
+	at ?.it shows a successfull message &quot;Your message has been successfully sent to our team.&quot;(file:///D:/Automation/POMPractice3/src/test/resources/parallel/ContactUs.feature:7)
+</pre></div><a href='#' onClick='toggleBox("stack-trace878876118", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace878876118'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;div#center_column p&quot;}
+  (Session info: chrome=92.0.4515.159)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.0.0-beta-4&apos;, revision: &apos;29f46d02dd&apos;
+System info: host: &apos;A900HO_L_A9687&apos;, ip: &apos;192.168.1.5&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5fbcae6350c32f9c7ef6ad3d6ade0f89, findElement {using=css selector, value=div#center_column p}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: C:\Users\A9687\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57134}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57134/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 5fbcae6350c32f9c7ef6ad3d6ade0f89
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:162)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:137)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:612)
+	at org.openqa.selenium.remote.RemoteWebDriver$Mechanism$2.findElement(RemoteWebDriver.java:1251)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:373)
+	at com.pages.ContactUsPage.getSuccessMessg(ContactUsPage.java:44)
+	at parallel.ContactUsSteps.it_shows_a_successfull_message(ContactUsSteps.java:53)
+	at ?.it shows a successfull message &quot;Your message has been successfully sent to our team.&quot;(file:///D:/Automation/POMPractice3/src/test/resources/parallel/ContactUs.feature:7)
+</pre></div></td>
+<td>59</td>
 <td>parallel.ParallelRun@793f29ff</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
@@ -143,24 +203,24 @@ Session ID: dbe3c3b857598eb7b361c94bd1f59f8a
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='parallel.ParallelRun.runScenario()'><b>runScenario</b><br>Test class: parallel.ParallelRun<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Accounts section count", "Optional[Account Page Feature]"</td>
+<td title='parallel.ParallelRun.runScenario()'><b>runScenario</b><br>Test class: parallel.ParallelRun<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Contact Us scenario with different set of data", "Optional[Contact us Feature]"</td>
 <td></td>
-<td>28</td>
+<td>59</td>
 <td>parallel.ParallelRun@793f29ff</td></tr>
 <tr>
-<td title='parallel.ParallelRun.runScenario()'><b>runScenario</b><br>Test class: parallel.ParallelRun<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login Page Title", "Optional[Login Page feature]"</td>
+<td title='parallel.ParallelRun.runScenario()'><b>runScenario</b><br>Test class: parallel.ParallelRun<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Contact Us scenario with different set of data", "Optional[Contact us Feature]"</td>
 <td></td>
-<td>25</td>
+<td>68</td>
 <td>parallel.ParallelRun@793f29ff</td></tr>
 <tr>
-<td title='parallel.ParallelRun.runScenario()'><b>runScenario</b><br>Test class: parallel.ParallelRun<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Accounts Page title", "Optional[Account Page Feature]"</td>
+<td title='parallel.ParallelRun.runScenario()'><b>runScenario</b><br>Test class: parallel.ParallelRun<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Contact Us scenario with different set of data", "Optional[Contact us Feature]"</td>
 <td></td>
-<td>29</td>
+<td>56</td>
 <td>parallel.ParallelRun@793f29ff</td></tr>
 <tr>
-<td title='parallel.ParallelRun.runScenario()'><b>runScenario</b><br>Test class: parallel.ParallelRun<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login With correct credentials", "Optional[Login Page feature]"</td>
+<td title='parallel.ParallelRun.runScenario()'><b>runScenario</b><br>Test class: parallel.ParallelRun<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Contact Us scenario with different set of data", "Optional[Contact us Feature]"</td>
 <td></td>
-<td>28</td>
+<td>67</td>
 <td>parallel.ParallelRun@793f29ff</td></tr>
 </table><p>
 </body>

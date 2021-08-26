@@ -10,7 +10,7 @@ import io.cucumber.testng.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		
-		features = {"src/test/resources/parallel" },
+		features = {"D:\\Automation\\POMPractice3\\src\\test\\resources\\parallel\\ContactUs.feature" },
 		glue = {"parallel"},
 		plugin = {"pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:" }
 						
